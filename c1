@@ -1,0 +1,31 @@
+vowels=['i','e','a','o','u','I','E','A','O','U']
+
+def anti_vowel(text):
+    t=""
+    for c in text:
+        for i in vowels:
+            if c==i:
+                c=""
+            else:
+                c=c
+        t=t+c
+    return t
+    
+"""
+The code is an example of the most rudimentary, brute force approach.
+
+Start with an a variable initialized to an empty string.
+Set up a loop to iterate over the text, character by character.
+Iterate over the vowel list and compare each one to the current character.
+If there is a match, then cache an empty string in the temporary variable.
+If no match then cache the current character in the temporary variable.
+Replace the running string value with the concatenation of the old string and the current temporary variable value.
+When the outer loop is complete, return the stored string value.
+We call this a brute force approach because it iterates the maximum number of times, every time, and never deviates from that algorithm. More to the point, when c is 'a' it still iterates over the entire vowel list making unnecessary comparisons.
+
+There is no fault in this approach since it is like starting with a fundamental model that has no abstracts. We can draw it out with pencil and paper. It doesn’t get simpler than this. A great place to launch from.
+
+Now it is our task to play with the code and see where we can improve its efficiency (perhaps) and readability (again, perhaps). We can use it as a springboard to alternate approaches for the sheer experience of leveraging code from different angles.
+
+https://discuss.codecademy.com/t/anti-vowel-please-explain-codeacademys-default-answer/216249
+"""
